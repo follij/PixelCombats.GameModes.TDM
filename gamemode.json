@@ -1,6 +1,6 @@
 {
-  "Name": "TDM",
-  "Description": "Team Death Match. Битва двух команд",
+  "Name": "Deathmatch",
+  "Description": "Deathmatch",
   "StartClientVersion": 573,
   "MapFilter": {
     "IsBlank": false,
@@ -15,8 +15,8 @@
       "MapListId": 581
     }
   ],
-  "Parameters": {
-    "Bool": [
+  "Parameters": { "Слив прогрессца после 5 смертей"
+    "Bool": [ "true"
       {
         "Name": "MapRotation",
         "DisplayName": "GmParams/MapRotation",
@@ -52,8 +52,8 @@
         "Order": 6,
         "Variants": [
           {
-            "Name": "Length_S",
-            "DisplayName": "GmParams/Length_S"
+            "Name": "время 5мин",
+            "DisplayName": "GmParams/Время 5мин"
           },
           {
             "Name": "Length_M",
