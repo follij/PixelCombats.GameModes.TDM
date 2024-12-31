@@ -6,10 +6,10 @@
     "IsBlank": false,
     "HasParcourEnd": false
   },
-  "MapLists":"карта 1"
+  "MapLists": {
     {
       "MapListId": 324,
-      "Name": "Неофициальные карты"
+      "Name": "Официальные карты"
     },
     {
       "MapListId": 581
