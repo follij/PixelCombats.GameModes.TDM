@@ -10,7 +10,7 @@ const KnivesModeTime = 40;
 const GameModeTime = default_timer.game_mode_length_seconds();
 const MockModeTime = 20;
 const EndOfMatchTime = 8;
-const VoteTime = 20;
+const VoteTime = 10;
 
 const KILL_SCORES = 5;
 const WINNER_SCORES = 10;
@@ -172,7 +172,7 @@ function SetBuildMode() {
 	inventory.Secondary.Value = false;
 	inventory.Melee.Value = true;
 	inventory.Explosive.Value = false;
-	inventory.Build.Value = true;
+	inventory.Build.Value = false;
 	// запрет нанесения урона
 	Damage.GetContext().DamageOut.Value = false;
 
@@ -208,13 +208,13 @@ function SetGameMode() {
 		inventory.Secondary.Value = false;
 		inventory.Melee.Value = true;
 		inventory.Explosive.Value = false;
-		inventory.Build.Value = true;
+		inventory.Build.Value = false;
 	} else {
-		inventory.Main.Value = true;
+		inventory.Main.Value = false;
 		inventory.Secondary.Value = true;
 		inventory.Melee.Value = true;
-		inventory.Explosive.Value = true;
-		inventory.Build.Value = true;
+		inventory.Explosive.Value = false;
+		inventory.Build.Value = false;
 	}
 
 	mainTimer.Restart(GameModeTime);
@@ -260,10 +260,10 @@ function SetMockMode(winners, loosers) {
 
 	// set winners
 	inventory = Inventory.GetContext(winners);
-	inventory.MainInfinity.Value = true;
-	inventory.SecondaryInfinity.Value = true;
-	inventory.ExplosiveInfinity.Value = true;
-	inventory.BuildInfinity.Value = true;
+	inventory.MainInfinity.Value = false;
+	inventory.SecondaryInfinity.Value = false;
+	inventory.ExplosiveInfinity.Value = false;
+	inventory.BuildInfinity.Value = false;
 
 	// френдли фаер для победивших
 	//Damage.GetContext(winners).FriendlyFire.Value = true;
